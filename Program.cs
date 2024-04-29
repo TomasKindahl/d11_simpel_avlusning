@@ -4,28 +4,22 @@
     {
         class Vector
         {
-            double x, y, z;
+            double X, Y, Z;
             public Vector(double x, double y, double z)
             {
-                this.x = x; this.y = y; this.z = z;
+                X = x; Y = y; Z = z;
             }
             public override string ToString()
             {
-                return $"({x} {y} {z})";
+                return $"({X} {Y} {Z})";
             }
             public static Vector operator +(Vector u, Vector v)
             {
-                return new Vector(u.x + v.x, u.y + v.y, u.z + v.z);
+                return new Vector(u.X + v.X, u.Y + v.Y, u.Z + v.Z);
             }
         }
         static void Main(string[] args)
         {
-            int?[] ints = { 1, 2, 3, null };
-            foreach (int? i in ints)
-            {
-                Console.WriteLine(i * 3);
-            }
-
             Vector?[] vectors = { new Vector(1, 2, 1), new Vector(2, 3, -1), null };
             foreach(Vector? v in vectors)
             {
